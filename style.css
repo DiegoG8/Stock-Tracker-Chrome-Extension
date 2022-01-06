@@ -1,0 +1,91 @@
+* { 
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    
+}
+
+body {
+    width: 250px;
+    height: 400px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+body > form {
+    display: flex;
+    flex-direction: column;
+}
+.exchangeToggle-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid rgb(247, 0, 0); */
+}
+
+.exchangeToggle-Stock, .exchangeToggle-Crypto {
+    width: 48%;
+}
+
+.exchange-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+
+    /* border: 2px solid rgb(4, 224, 88); */
+}
+.exchange-button {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.exchange-button-red {
+    background-color: rgb(255, 23, 7);
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.exchange-button-green {
+    background-color: rgb(46, 212, 31);
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.exchange-attribute {    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.exchange-text, .exchange-price {
+    pointer-events: none;
+    color: black;
+}
+

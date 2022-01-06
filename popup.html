@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <title>BooQuery</title>
+</head>
+<body class = "container">
+
+    <div class = "exchangeToggle-container">
+        <button class = "exchangeToggle-Stock">Stock</button>
+        <button class = "exchangeToggle-Crypto">Crypto</button>
+    </div> 
+
+    <form>
+        <input class = "exchange-input" type = "text" placeholder="Add Stock Symbol">  
+        <button class = "addExchange-button">Add</button> 
+    </form>
+    
+    <ul class = "exchange-list"> 
+        <!-- Watch List -->
+    </ul>
+    
+
+    <button class = "update-button">Update</button>
+
+    <div>by: BooQuery</div> 
+
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>

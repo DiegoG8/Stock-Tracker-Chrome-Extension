@@ -1,0 +1,17 @@
+{
+    "name": "BooQuery", 
+    "description": "This extension will analyze Stock prices and alert user given a threshold range",
+    "version": "1.0", 
+    "manifest_version": 2, 
+    "browser_action" : {
+        "default_popup": "popup.html", 
+        "default_icon": "logo.png"
+    },
+    "icons": {
+        "128": "logo.png"
+    },
+    "permissions": ["activeTab"]
+
+
+
+}
