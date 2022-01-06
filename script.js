@@ -109,7 +109,7 @@ function addExchange(e) {
             }
         }
         if (!duplicate) {
-           
+            console.log('test change'); 
             var options = {
                 method: 'GET',
                 url: 'https://stock-data-yahoo-finance-alternative.p.rapidapi.com/v6/finance/quote',
