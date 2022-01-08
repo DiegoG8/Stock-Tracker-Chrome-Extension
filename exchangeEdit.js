@@ -16,7 +16,7 @@ function getChosenExchange() {
     let obj = JSON.parse(localStorage.getItem('exchanges'))[index];
 
     document.querySelector('.exchange-text').innerHTML = obj.exchange; 
-    document.querySelector('.exchange-price').innerHTML = obj.exchangePrice;
+    document.querySelector('.exchange-price').innerHTML = '$'+obj.exchangePrice;
     
     document.querySelector('.newHighThresh').setAttribute('placeholder', `$${obj.amountOver}`);
     document.querySelector('.newLowThresh').setAttribute('placeholder', `$${obj.amountUnder}`);

@@ -5,8 +5,8 @@ var stockSymbol = '';
 var stockPrice = ''; 
 
 // Selectors
-const stockToggleButton = document.querySelector('.exchangeToggle-Stock');
-const cryptoToggleButton = document.querySelector('.exchangeToggle-Crypto');
+// const stockToggleButton = document.querySelector('.exchangeToggle-Stock');
+// const cryptoToggleButton = document.querySelector('.exchangeToggle-Crypto');
 const exchangeInput = document.querySelector(".exchange-input"); 
 const addExchangeButton = document.querySelector(".addExchange-button");
 const exchangeList = document.querySelector(".exchange-list");  
@@ -14,8 +14,8 @@ const updateButton = document.querySelector(".update-button");
 
 // Event Listeners 
 document.addEventListener('DOMContentLoaded', getExchanges);
-stockToggleButton.addEventListener('click',switchExchangeToggle); 
-cryptoToggleButton.addEventListener('click',switchExchangeToggle); 
+// stockToggleButton.addEventListener('click',switchExchangeToggle); 
+// cryptoToggleButton.addEventListener('click',switchExchangeToggle); 
 addExchangeButton.addEventListener("click", addExchange); 
 exchangeList.addEventListener('click', getSaveIndexOfChossen);
 updateButton.addEventListener('click', updatePrices);
@@ -45,7 +45,7 @@ function updatePrices(e) {
             console.log('inside update'); 
             stockPrice = response.data["quoteResponse"]["result"][0]["regularMarketPrice"];
             console.log(stockPrice); 
-            exchanges[i].exchangePrice = stockPrice;
+            exchanges[i].exchangePrice = stockPrice.toFixed(2);
             if (stockPrice > exchanges[i].amountOver) {
                 exchanges[i].needle = 1; 
                 console.log('1: ', exchanges[i].needle); 
@@ -84,7 +84,7 @@ function updatePrices(e) {
     console.log('2'); 
     setTimeout(function(){
         window.location.reload(1);
-     }, 3000);
+    }, 2000);
 }
 
 function addExchange(e) {
@@ -143,7 +143,7 @@ function addExchange(e) {
                 // get exchange price
                 const exchangePrice = document.createElement('span');
                 exchangePrice.classList.add('exchange-price'); 
-                exchangePrice.innerText = stockPrice.toLocaleString();
+                exchangePrice.innerText = '$'+stockPrice.toLocaleString();
                 exchangeAttribute.appendChild(exchangePrice);
 
                 // save new exchange to local storage
@@ -180,10 +180,10 @@ function saveExchangeLocalStorage(exchange, price) {
     }
     let exchangeObj = {
         'exchange': exchange, 
-        'exchangePrice': price,
-        'exchangeType': exchangeToggle,
-        'amountOver': 0, 
-        'amountUnder':0, 
+        'exchangePrice': price.toFixed(2),
+        // 'exchangeType': exchangeToggle,
+        'amountOver': price, 
+        'amountUnder':price, 
         'needle':0, 
     };
     exchanges.push(exchangeObj);
@@ -206,10 +206,10 @@ function deleteExchangeLocalStorage(exchange) {
     localStorage.setItem('exchanges',JSON.stringify(exchanges)); 
 }
 
-function switchExchangeToggle(e) {
-    let exchangeType = e.target.innerText; 
-    exchangeToggle = exchangeType;
-}
+// function switchExchangeToggle(e) {
+//     let exchangeType = e.target.innerText; 
+//     exchangeToggle = exchangeType;
+// }
 
 function getExchanges() { 
     let exchanges; 
@@ -251,7 +251,7 @@ function getExchanges() {
         // get exchange price
         const exchangePrice = document.createElement('span');
         exchangePrice.classList.add('exchange-price'); 
-        exchangePrice.innerText = exchange['exchangePrice'].toLocaleString();
+        exchangePrice.innerText = '$'+exchange['exchangePrice'].toLocaleString();
         exchangeAttribute.appendChild(exchangePrice);
 
         // append to list 

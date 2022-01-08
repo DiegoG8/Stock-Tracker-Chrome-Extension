@@ -1,5 +1,6 @@
 * { 
-    font-family: 'Lato';
+    font-family: sans-serif;
+    font-style: normal;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -8,19 +9,26 @@
 
 body {
     width: 250px;
-    height: 400px;
+    height: 450px;
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 body > form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    /* border: 1px solid rgb(205, 39, 39); */
+}
+body > h1 {
+    font-size: 1.5rem;
+}
+body > h2 {
+    font-size: 16px;
 }
 .exchangeToggle-container {
     display: flex;
@@ -39,41 +47,59 @@ body > form {
     align-items: center;
     width: 100%;
     padding-left: 0;
+    height: 50%;
+    overflow: scroll;
+
+    /* border: 2px solid rgb(4, 224, 88); */
+}
+.exchange-list2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+    overflow: scroll;
 
     /* border: 2px solid rgb(4, 224, 88); */
 }
 .exchange-button {
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 3px;
+    background-color: #00296B;
+    border: 2px solid #4C87E5;
+    padding: 8px;
+    border-radius: 7px;
     margin: 3px;
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: 89%;
+    height: 32px; 
     cursor: pointer;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 .exchange-button-red {
-    background-color: rgb(255, 23, 7);
-    padding: 5px;
-    border-radius: 3px;
+    background-color: #F72585;
+    border: 2px solid #FF4DCD;
+    padding: 8px;
+    border-radius: 7px;
     margin: 3px;
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: 89%;
+    height: 32px; 
     cursor: pointer;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 .exchange-button-green {
-    background-color: rgb(46, 212, 31);
-    padding: 5px;
-    border-radius: 3px;
+    background-color: #0C9200;
+    border: 2px solid #0FBE00;
+    padding: 8px;
+    border-radius: 7px;
     margin: 3px;
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: 89%;
+    height: 32px; 
     cursor: pointer;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .exchange-attribute {    
@@ -81,11 +107,45 @@ body > form {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
+    /* border: 3px solid #01d0ff; */
 }
 
 .exchange-text, .exchange-price {
     pointer-events: none;
-    color: black;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 20px;
+    /* border: 3px solid #b301ff; */
 }
 
+.exchange-input {
+    width: 97%; 
+    margin-bottom: 6px;
+    height: 27px;
+    font-size: 14px;
+}
+.addExchange-button {
+    width: 100%; 
+    background-color: #000000;
+    border: 2px solid #545454;
+    color: white;
+    height: 32px;
+    font-size: 16px;
+}
+.saveChanges, .newHighThresh, .newLowThresh{
+    margin-bottom: 6px;
+}
+.alert-space {
+    height: 60%;
+}
+.update-button,.saveChanges, .deleteExchange {
+    width: 60%;
+    background-color: #000000;
+    border: 2px solid #545454;
+    color: white;
+    height: 32px;
+    font-size: 16px;
+
+}
