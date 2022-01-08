@@ -1,13 +1,15 @@
 {
-    "name": "BooQuery", 
-    "description": "This extension will analyze Stock prices and alert user given a threshold range",
-    "version": "1.0", 
+    "name": "Stock WatchList by BooQuery", 
+    "description": "This extension will analyze Stock prices and alert user when price passes a given threshold range",
+    "version": "1.0.0", 
     "manifest_version": 2, 
     "browser_action" : {
         "default_popup": "popup.html", 
         "default_icon": "logo.png"
     },
-    "icons": {
+    "icons": { 
+        "16": "logo.png",
+        "48": "logo.png",
         "128": "logo.png"
     },
     "permissions": ["activeTab"]
